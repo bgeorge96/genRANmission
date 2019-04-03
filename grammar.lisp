@@ -1,10 +1,14 @@
 (defparameter MS
-    '(N V N)
+    '(IN N V N)
 )
 
 (defparameter grammar
     '(
-        (N ("boy" "girl"))
-        (V ("run" "jump"))
+        (IN (DET INN PREP))
+        (DET ("the" "a"))
+        (PREP ("of"))
+        (INN ("mission" "objective" "plan" "idea" ""))
+        (N ("boy" "girl" "turtle" "lady" "baby" "ball" "thing"))
+        (V ("run" "jump" "hide" "walk" "hike" "work" "play"))
     )
 )

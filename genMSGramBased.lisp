@@ -1,5 +1,6 @@
 (load "grammar.lisp")
 
+;; Will add spacing between the strings and period at end
 (defun formatString (words n )
     (cond
         ((null words) '("."))
@@ -31,6 +32,5 @@
 
 ;; this is the top level that calls subfunctions to parse and change values
 (defun genMSGram ()
-    ;; (values grammar ms)
     (make-sentence (fill-in-ms MS grammar))
 )
