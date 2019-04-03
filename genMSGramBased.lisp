@@ -1,3 +1,5 @@
+(load "grammar.lisp")
+
 (defun formatString (words n )
     (cond
         ((null words) '("."))
@@ -29,7 +31,6 @@
 
 ;; this is the top level that calls subfunctions to parse and change values
 (defun genMSGram ()
-    (load "grammar.lisp")
     ;; (values grammar ms)
     (make-sentence (fill-in-ms MS grammar))
 )
