@@ -1,8 +1,5 @@
 ;Brandon Geroge & Qiang Wang
 ;Call the function - make to generate a mission
-(format t "Welcom to template based sentence generator ~%")
-(format t  "Here is the format of the sentences: ~%")
-(format t "NAME wants to VERB Ball-SPORT ~%")
 (setf name '("Taylor University" "Baylor University" "High way"))
 (setf verb '(have develope improve educate))
 (setf noun '(school church community village))
@@ -15,6 +12,6 @@
   (nth (random (list-length alist)) alist)
 )
 
-(defun make (n)
+(defun make ()
   (format t (pickThings string) (pickThings name) (pickThings verb) (pickThings noun))
 )

@@ -1,14 +1,23 @@
 (defparameter MS
-    '(IN N V N)
+    '(N V N)
+    ;; '(IN N VP SP)
 )
 
 (defparameter grammar
     '(
-        (IN (DET INN PREP))
-        (DET ("the" "a"))
-        (PREP ("of"))
-        (INN ("mission" "objective" "plan" "idea" ""))
-        (N ("boy" "girl" "turtle" "lady" "baby" "ball" "thing"))
-        (V ("run" "jump" "hide" "walk" "hike" "work" "play"))
+        (N ("boy" "girl"))
+        (V ("run" "jump"))
+        ;; (SP (ADJ PN))
+        ;; (IN (DET INN PREP))
+        ;; (VP (HV PREP V))
+        ;; (DET ("the" "a"))
+        ;; (ADJ ("beautiful" "wonderful" "awesome" "amazing" "unbelievable"))
+        ;; (PREP ("of"))
+        ;; (HV ("is"))
+        ;; (INN ("mission" "objective" "plan" "idea" ""))
+        ;; (N ("boy" "girl" "turtle" "lady" "baby" "ball" "thing"))
+        ;; (PN ("boys" "girls" "turtles" "ladies" "babies" "balls" "things"))
+        ;; (V ("run" "jump" "hide" "walk" "hike" "work" "play"))
     )
 )
+;; 
