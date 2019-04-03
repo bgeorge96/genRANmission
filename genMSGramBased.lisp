@@ -13,23 +13,23 @@
 )
 
 ;; this function takes care of finding and picking from word list by type of word 
-(defun find&pickWords (part grammer)
-    (let ((wordChoices (cadar (member part grammer :key #'car))))
+(defun find&pickWords (part grammar)
+    (let ((wordChoices (cadar (member part grammar :key #'car))))
         (nth (random (list-length wordChoices)) wordChoices)
     )
 )
 
 ;; this function does the inital part of finding the blanks
-(defun fill-in-ms (MS grammer)
+(defun fill-in-ms (MS grammar)
     (if (null MS)
         ()
-        (cons (find&pickWords (car MS) grammer) (fill-in-ms (cdr MS) grammer))
+        (cons (find&pickWords (car MS) grammar) (fill-in-ms (cdr MS) grammar))
     )
 )
 
 ;; this is the top level that calls subfunctions to parse and change values
 (defun genMSGram ()
-    (load "grammer.lisp")
-    ;; (values grammer ms)
-    (make-sentence (fill-in-ms MS grammer))
+    (load "grammar.lisp")
+    ;; (values grammar ms)
+    (make-sentence (fill-in-ms MS grammar))
 )

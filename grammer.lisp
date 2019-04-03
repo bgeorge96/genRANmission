@@ -2,7 +2,7 @@
     '(N V N)
 )
 
-(defparameter grammer
+(defparameter grammar
     '(
         (N ("boy" "girl"))
         (V ("run" "jump"))
