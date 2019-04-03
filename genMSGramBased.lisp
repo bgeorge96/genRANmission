@@ -1,12 +1,15 @@
+(defun formatString (words n )
+    (cond
+        ((null words) '("."))
+        ((= (list-length words) 1) (append (list (car words)) (formatString (cdr words) (+ n 1))))
+        ((= n 0) (append (list (string-capitalize (car words))) '(" ") (formatString (cdr words) (+ n 1))))
+        (t (append (list (car words)) '(" ")  (formatString (cdr words) (+ n 1))) ) 
+    )
+)
+
+;; This will concatenate the words into a sentence and call formating functions
 (defun make-sentence (words)
-    (concatenate 'string (car words) (cadar words))
-    ;; (if (null words)
-    ;;     "."
-    ;;     (if (= (list-length words) 1)
-    ;;         (concatenate 'string (car words) (cdr words))
-    ;;         (concatenate 'string (car words) " " (cdr words))
-    ;;     )
-    ;; )
+    (apply #'concatenate 'string (formatString words 0))
 )
 
 ;; this function takes care of finding and picking from word list by type of word 
