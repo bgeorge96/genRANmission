@@ -29,7 +29,3 @@ The grammar that is expected is the following:
 ```
 The code above is used for the terminal statements for what the mission statements could end up saying.
 
-<!-- The mission of Taylor University is to develop servant leaders marked with a passion to minister Christ's redemptive love and truth to a world in need. -->
-<!-- The mission of Baylor University is to educate men and women for worldwide leadership and service by integrating academic excellence and Christian commitment within a caring community. -->
-<!-- Speedway's mission is to be the customers' first choice for value and convenience. -->
-<!-- Deliver exceptional Asian dining experiences by building an organization where people are inspired to better their lives. -->
