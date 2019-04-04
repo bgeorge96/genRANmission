@@ -22,8 +22,8 @@ The grammar that is expected is the following:
 ``` lisp
 (defparameter grammar
     '(
-        (N ("boy" "girl"))
-        (V ("run" "jump"))
+        (N (END "boy" "girl"))
+        (V (END "run" "jump"))
     )
 )
 ```

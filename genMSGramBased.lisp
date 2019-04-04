@@ -16,17 +16,21 @@
 )
 
 ;; this function takes care of finding and picking from word list by type of word 
-(defun find&pickWords (part grammar)
-    (let ((wordChoices (cadar (member part grammar :key #'car))))
-        (nth (random (list-length wordChoices)) wordChoices)
-    )
+(defun pickWords (choices grammar)
+    (nth (random (list-length choices)) choices)
 )
 
-;; this function does the inital part of finding the blanks
+;; this function does the inital part of finding terminal entries
+;; and construct chosen words
 (defun fill-in-ms (MS grammar)
-    (if (null MS)
+    (if (Null MS)
         ()
-        (cons (find&pickWords (car MS) grammar) (fill-in-ms (cdr MS) grammar))
+        (let ((choices (cadar (member (car ms) grammar :key #'car))))
+            (if (equal (car choices) 'end)
+                (cons (pickWords (cdr choices) grammar) (fill-in-ms (cdr ms) grammar))
+                (append (fill-in-ms choices grammar) (fill-in-ms (cdr ms) grammar))
+            )
+        )
     )
 )
 
