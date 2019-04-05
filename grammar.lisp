@@ -12,7 +12,7 @@
         (PREP (END "of" "at" "for" "with" "from"))
         (HV (END "is" "was" "will" "be" "shall"))
         (INN (END "mission" "objective" "plan" "idea" "hope"))
-        (N (END "Taylor University" "Baylor University" "Dayton Unversity" "Speedway" "Marathon"))
+        (N (END "Taylor University" "Baylor University" "Dayton University" "Speedway" "Marathon"))
         (PN (END "students" "adults" "collegues" "youth" "elders"))
         (V (END "invite" "inspire" "engage" "walk" "develop" "work" "learn"))
     )
