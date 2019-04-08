@@ -23,7 +23,7 @@ The following lines are used to format the layout of the Mission Statement:
     '(IN N VP SP) ;; setting up the structure of the sentence
 )
 ```
-### ~*Important*~
+### *Important*
 _The terminal mappings need to begin with the symbol `END` to show it is the deepest mapping there could be._  
   
 The grammar that is expected is the following:
